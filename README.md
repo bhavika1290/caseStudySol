@@ -11,16 +11,26 @@ Make sure you have the following installed:
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone caseStudy
 
-# Navigate to project directory
-cd <project-folder>
+# Navigate to frontend
+cd frontend
 
 # Install dependencies
 npm install
 
 # Start the development server
 npm run dev
+
+# Navigate to backend
+cd backend
+
+# Install dependencies
+npm install
+
+# Start the development server
+node server.js
+
 ```
 
 After running the above commands, open your browser and visit:
@@ -66,6 +76,10 @@ After running the above commands, open your browser and visit:
 * Desktop/Tablet: Map + time-series panel.
 * Mobile: Only the SVG map is visible to ensure clarity and usability.
 
+### 6. Backend
+
+* It has only one take of calling to llm to get the ai suggestions
+  
 ## Design Choices & Rationale
 
 ### Responsive Layout
@@ -82,6 +96,7 @@ After running the above commands, open your browser and visit:
 
 * Utility functions (scaling, bounds calculation) are kept outside components.
 * Visualization logic is decoupled from layout logic.
+* Backend and frontend logics are seperated .The frontend is displaying the ui while the backend is calling the llm for ai suggestions
 
 ### Performance Optimization
 
@@ -103,6 +118,6 @@ After running the above commands, open your browser and visit:
 ## **C2. AI-Driven Insights Agent**
 
 * We have integrated a chatbot in the header section to serve as the AI Insights Agent.
-* The system provides the last 5 days of data to the LLM, which predicts anomalies or significant changes in asset performance.
-* Example: If ID X drops 15% in performance over the last 3 days, the agent highlights this in an insight panel.
-* This approach demonstrates how an AI assistant can be woven into a standard dashboard UI without requiring a massive back-end analysis system.
+* The system provides the last 5 days of data to the LLM, which predicts anomalies or significant changes in asset performance and also tells the reason for the change happended.
+* Example: If ID X drops 15% in performance over the last 3 days, the agent highlights this in an insight panel and tells the reason for it.
+* This approach demonstrates how an AI assistant can be woven into a standard dashboard UI by calling the backend.
