@@ -11,7 +11,11 @@ Make sure you have the following installed:
 
 ```bash
 # Clone the repository
-git clone caseStudy
+git clone https://github.com/bhavika1290/caseStudySol
+
+
+#navigate to caseSol
+cd caseSol
 
 # Navigate to frontend
 cd frontend
@@ -35,8 +39,11 @@ node server.js
 
 After running the above commands, open your browser and visit:
 
-```http://localhost:5173
-```
+```http://localhost:5173```
+
+## **NOTE**
+
+* The backend logic of calling to api will only work when you will create a .env file in the backend folder and paste the token inside the brackets{HF_TOKEN=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} 
 
 ## **Assumptions**
 
