@@ -15,7 +15,7 @@ git clone https://github.com/bhavika1290/caseStudySol
 
 
 #navigate to caseSol
-cd caseSol
+cd caseStudySol
 
 # Navigate to frontend
 cd frontend
